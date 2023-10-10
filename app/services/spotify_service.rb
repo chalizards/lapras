@@ -23,8 +23,8 @@ class SpotifyService
     valid_response?(response)
   end
 
-  def get_track_info(token, track_id)
-    response = get_track(token, track_id)
+  def get_track_info(track_id)
+    response = get_track(track_id)
 
     valid_response?(response)
   end
@@ -57,9 +57,9 @@ class SpotifyService
     response['access_token']
   end
 
-  def get_track(token, track_id)
+  def get_track(track_id)
     url = "#{TRACK_URL}/#{track_id}"
-    headers = { 'Authorization' => "Bearer #{token}" }
+    headers = { 'Authorization' => "Bearer #{@token}" }
 
     HTTParty.get(url, headers:)
   end

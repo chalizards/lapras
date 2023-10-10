@@ -48,7 +48,7 @@ RSpec.describe 'SpotifyService' do
 
         request = SpotifyService.new
 
-        track = request.get_track_info(request.token, track_id)
+        track = request.get_track_info(track_id)
 
         expect(track['name']).to eq("Tears Don't Fall")
         expect(track['id']).to eq('5pKCDm2fw4k6D6C5Rk646C')
@@ -69,7 +69,7 @@ RSpec.describe 'SpotifyService' do
 
         request = SpotifyService.new
 
-        expect { request.get_track_info(request.token, 'bulbasauro') }.to raise_error(StandardError)
+        expect { request.get_track_info('bulbasauro') }.to raise_error(StandardError)
       end
     end
   end

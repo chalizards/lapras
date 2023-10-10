@@ -14,4 +14,5 @@
 ```
 docker compose up -d
 docker exec -ti lapras /bin/bash
+rails server -p 3000 -b '0.0.0.0'
 ```
