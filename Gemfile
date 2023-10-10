@@ -24,6 +24,6 @@ gem 'json', '~> 2.6'
 gem 'reek', '~> 6.1'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 6.0.0'
   gem 'pry', '~> 0.14.2'
+  gem 'rspec-rails', '~> 6.0.0'
 end
