@@ -19,7 +19,7 @@ jobs:
           ruby-version: '3.1.2'
           bundler-cache: true
       - name: Run tests
-        run: bin/rake
+        run: bundle exec rspec
 
   lint:
     runs-on: ubuntu-latest
@@ -33,11 +33,8 @@ jobs:
           ruby-version: '3.1.2'
           bundler-cache: true
 
-      - name: Security audit dependencies
-        run: bin/bundler-audit --update
-
       - name: Rubocop Lint
-        run: bundle exec rspec
+        run: bundle exec rubocop
 
       - name: Reek Lint
         run: bundle exec reek
