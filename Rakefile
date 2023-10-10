@@ -15,7 +15,7 @@ RuboCop::RakeTask.new(:rubocop) do |task|
   task.patterns = ['**/*.rb']
 end
 
-Reek::Rake::Task.new(:reek) do |task|
+Reek::Rake::Task.new do |task|
   task.patterns = ['**/*.rb']
 end
 
