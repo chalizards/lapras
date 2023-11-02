@@ -41,8 +41,8 @@ module Lapras
 
     config.spotify = {
       url: 'https://api.spotify.com/v1',
-      client_id: ENV['SPOTIFY_CLIENT_ID'],
-      client_secret: ENV['SPOTIFY_CLIENT_SECRET'],
+      client_id: ENV.fetch('SPOTIFY_CLIENT_ID'),
+      client_secret: ENV.fetch('SPOTIFY_CLIENT_SECRET'),
       auth_url: 'https://accounts.spotify.com/api/token',
       track_url: 'https://api.spotify.com/v1/tracks'
     }

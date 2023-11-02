@@ -1,0 +1,6 @@
+Metrics/BlockLength:
+  Exclude:
+    - '**/spec/**/*' # Disable BlockLength metric for RSpec
+
+AllCops:
+  NewCops: enable
